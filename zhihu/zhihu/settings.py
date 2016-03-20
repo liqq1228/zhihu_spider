@@ -104,3 +104,6 @@ MONGO_URI = 'mongodb://localhost:27017'
 ITEM_PIPELINES = {
     'zhihu.pipelines.ZhihuPipeline': 500,
 }
+
+# 异步任务队列
+BROKER_URL = 'amqp://guest:guest@localhost:5672//'
