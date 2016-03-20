@@ -42,7 +42,7 @@ class ZhihuPipeline(object):
     def close_spider(self, spider):
         self.client.close()
 
-    def _download_iamge(self, image_url):
+    def _download_image(self, image_url):
         """
         下载图片
         """
@@ -65,11 +65,11 @@ class ZhihuPipeline(object):
 
         image_url = item['image_url']
         if image_url:
-            self._download_iamge(image_url)
+            self._download_image(image_url)
 
     def _process_relation(self, item):
         """
-        存储人机拓扑关系
+        存储人际拓扑关系
         """
         collection = self.db['relation']
 
